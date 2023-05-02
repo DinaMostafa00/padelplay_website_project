@@ -1,3 +1,4 @@
+import { blog } from "@/types/blog";
 import { homePage } from "@/types/homePage";
 import { createClient, groq } from "next-sanity";
 import config from "./config/client-config";
@@ -29,4 +30,33 @@ export async function getHomePage(): Promise<homePage[]> {
             priceTextEssential,
             priceTextPremium,
             }`);
+}
+
+export async function getBlog(): Promise<blog[]> {
+  return createClient(config).fetch(groq`
+        *[_type == "blog"] {
+          _id,
+          _createdAt,
+          name,
+          "slug": slug.current,
+          "image": image.asset->url,
+          url,
+          content
+        }`);
+}
+
+export async function getBlogPage(slug: string): Promise<blog> {
+  return createClient(config).fetch(
+    groq`
+        *[_type == "blog" && slug.current == $slug][0] {
+          _id,
+          _createdAt,
+          name,
+          "slug": slug.current,
+          "image": image.asset->url,
+          url,
+          content
+        }`,
+    { slug }
+  );
 }
