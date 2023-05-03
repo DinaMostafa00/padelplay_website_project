@@ -1,5 +1,6 @@
 import { blog } from "@/types/blog";
 import { homePage } from "@/types/homePage";
+import { product } from "@/types/product";
 import { createClient, groq } from "next-sanity";
 import config from "./config/client-config";
 
@@ -7,7 +8,7 @@ export async function getHomePage(): Promise<homePage[]> {
   return createClient(config).fetch(groq`
         *[_type == "homePage"] {
             _id,
-            createdAt,
+            _createdAt,
             name,
             "slug": slug.current,
             heroText,
@@ -59,4 +60,22 @@ export async function getBlogPage(slug: string): Promise<blog> {
         }`,
     { slug }
   );
+}
+
+export async function getProductPage(): Promise<product[]> {
+  return createClient(config).fetch(groq`
+        *[_type == "product"] {
+            _id,
+            _createdAt,
+            name,
+            "slug": slug.current,
+            headerInfo,
+            "videoUrl": video.asset->url,
+            text1,
+            "image1":image.asset->url,
+            "image2":image.asset->url,
+            text2,
+            "image3":image.asset->url,
+            text3,
+            }`);
 }

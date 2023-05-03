@@ -33,7 +33,7 @@ export default function RootLayout({
           </div>
 
           <div className="hidden flex-1 items-center justify-center space-x-8 md:flex">
-            <Link className="headerLink" href="/products">
+            <Link className="headerLink" href="/product">
               {" PRODUCT"}
             </Link>
             <Link className="headerLink" href="/prices">
