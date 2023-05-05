@@ -1,6 +1,7 @@
 import { blog } from "@/types/blog";
 import { homePage } from "@/types/homePage";
 import { product } from "@/types/product";
+import { contactUs } from "@/types/contactUs";
 import { createClient, groq } from "next-sanity";
 import config from "./config/client-config";
 
@@ -77,5 +78,19 @@ export async function getProductPage(): Promise<product[]> {
             text2,
             "image3":image.asset->url,
             text3,
+            }`);
+}
+
+export async function getContacUstPage(): Promise<contactUs[]> {
+  return createClient(config).fetch(groq`
+        *[_type == "contactUs"] {
+            _id,
+            _createdAt,
+            name,
+            "slug": slug.current,
+            address,
+            email1,
+            email2,
+            phoneNumber,
             }`);
 }
