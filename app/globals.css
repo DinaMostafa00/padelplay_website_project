@@ -25,3 +25,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.priceBox {
+  @apply border border-yellow-500 mt-10 mb-20 p-6 hover:bg-[#D9D9D9]/[.2] flex flex-col items-center justify-center;
+}
+
+.yellowButton {
+  @apply sticky bg-yellow-500 border border-yellow-500 text-white py-4 px-8 font-bold hover:bg-gray-100 transition-colors duration-300 ease-in-out hover:text-yellow-500;
+}
+
+.priceTitle {
+  @apply text-center text-xl font-bold tracking-wide text-white pb-6 pt-3;
+}
+.priceText {
+  @apply text-center text-lg font-thin tracking-wide text-white pb-6;
+}

@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className=" sticky top-0 z-30 flex w-full items-center justify-between bg-transparent py-5">
+      <body>
+        <header className="fixed top-0 z-30 flex w-full items-center justify-between bg-transparent py-10">
           <div className="flex items-center justify-center md:w-1/5">
             <Link href="/">
               <div className="relative h-10 w-5 cursor-pointer opacity-75 transtion hover:opacity-100">
@@ -55,6 +55,23 @@ export default function RootLayout({
         </header>
 
         <main>{children}</main>
+
+        <footer className="bg-white text-black">
+          <div className="max-w-3xl mx-auto py-10">
+            <Link className="headerLink" href="/product">
+              {" PRODUCT"}
+            </Link>
+            <Link className="headerLink" href="/prices">
+              {"PRICES "}
+            </Link>
+            <Link className="headerLink" href="/streams">
+              {"      STREAMS"}
+            </Link>
+            <Link className="headerLink" href="/blog">
+              {"  BLOG "}
+            </Link>
+          </div>
+        </footer>
       </body>
     </html>
   );
