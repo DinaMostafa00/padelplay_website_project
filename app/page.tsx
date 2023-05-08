@@ -83,142 +83,72 @@ export default async function Home() {
               </div>
 
               {/* grid is here */}
+
               <div>
-                <h3 className="text-center font-semibold tracking-wide text-yellow-500 text-2xl md:text-4xl xl:text-5xl">
+                <h3 className="text-center font-semibold tracking-wide text-yellow-500 text-xl md:text-2xl xl:text-3xl mb-8">
                   {homePage.featuresTitle}
                 </h3>
               </div>
 
-              <div className="">
-                <table className="">
-                  <tbody>
-                    <tr>
-                      <td className=" px-4 py-2">
-                        <Image
-                          src="/66.png"
-                          alt="HEJ"
-                          width={300}
-                          height={200}
-                        />
-                      </td>
-                      <td className=" px-4  py-2">
-                        <h3>{homePage.featuresHeader1}</h3>
-                        <p>{homePage.featuresText1}</p>
-                      </td>
-                      <td className=" px-4 py-2">
-                        <Image
-                          src="/77.png"
-                          alt="HEJ"
-                          width={300}
-                          height={200}
-                        />
-                      </td>
-                      <td className=" px-4 py-2">
-                        <h3>{homePage.featuresHeader4}</h3>
-                        <p>{homePage.featuresText4}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className=" px-4 py-2">
-                        <Image
-                          src="/88.png"
-                          alt="HEJ"
-                          width={300}
-                          height={200}
-                        />
-                      </td>
-                      <td className=" px-4 py-2">
-                        <h3>{homePage.featuresHeader2}</h3>
-                        <p>{homePage.featuresText2}</p>
-                      </td>
-                      <td className=" px-4 py-2">
-                        <Image
-                          src="/99.png"
-                          alt="HEJ"
-                          width={300}
-                          height={200}
-                        />
-                      </td>
-                      <td className=" px-4 py-2">
-                        <h3>{homePage.featuresHeader5}</h3>
-                        <p>{homePage.featuresText5}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className=" px-4 py-2">
-                        <Image
-                          src="/55.png"
-                          alt="HEJ"
-                          width={300}
-                          height={200}
-                        />
-                      </td>
-                      <td className=" px-4 py-2">
-                        <h3>{homePage.featuresHeader3}</h3>
-                        <p>{homePage.featuresText3}</p>
-                      </td>
-                      <td className=" px-4 py-2">
-                        <Image
-                          src="/44.png"
-                          alt="HEJ"
-                          width={300}
-                          height={200}
-                        />
-                      </td>
-                      <td className=" px-4 py-2">
-                        <h3>{homePage.featuresHeader6}</h3>
-                        <p>{homePage.featuresText6}</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <div className="grid grid-cols-[50px_minmax(200px,_1fr)]  gap-4  xl:grid-cols-[100px_minmax(80px,_1fr)100px_minmax(80px,_1fr)] lg:gap-8  ">
+                <div className="imgGridDivStyling">
+                  <img src="/44.png" alt="HEJ" className="imgInGridHomePage " />
+                </div>
 
-              <div className="grid grid-cols-2   md:grid-cols-4  grid-rows-3 gap-4">
-                <div className="px-4 py-2">
-                  <Image src="/44.png" alt="HEJ" width={300} height={200} />
+                <div>
+                  <h3 className="gridTitleHomePage">
+                    {homePage.featuresHeader1}
+                  </h3>
+                  <p className="gridTextHomePage ">{homePage.featuresText1}</p>
                 </div>
-                <div className="bg-blue-500  px-4 py-2">
-                  <h3>{homePage.featuresHeader1}</h3>
-                  <p>{homePage.featuresText1}</p>
+                <div className="imgGridDivStyling">
+                  <img src="/55.png" alt="HEJ" className="imgInGridHomePage " />
                 </div>
-                <div className="px-4 py-2">
-                  <Image src="/55.png" alt="HEJ" width={300} height={200} />
+                <div>
+                  <h3 className="gridTitleHomePage">
+                    {homePage.featuresHeader2}
+                  </h3>
+                  <p className="gridTextHomePage ">{homePage.featuresText2}</p>
                 </div>
-                <div className="bg-blue-500  px-4 py-2">
-                  <h3>{homePage.featuresHeader2}</h3>
-                  <p>{homePage.featuresText2}</p>
+                <div>
+                  <img src="/66.png" alt="HEJ" className="imgInGridHomePage " />
                 </div>
-                <div className="px-4 py-2">
-                  <Image src="/66.png" alt="HEJ" width={300} height={200} />
+                <div>
+                  <h3 className="gridTitleHomePage">
+                    {homePage.featuresHeader3}
+                  </h3>
+                  <p className="gridTextHomePage ">{homePage.featuresText3}</p>
                 </div>
-                <div className="bg-blue-500  px-4 py-2">
-                  <h3>{homePage.featuresHeader3}</h3>
-                  <p>{homePage.featuresText3}</p>
+                <div className="imgGridDivStyling">
+                  <img src="/77.png" alt="HEJ" className="imgInGridHomePage " />
                 </div>
-                <div className="px-4 py-2">
-                  <Image src="/77.png" alt="HEJ" width={300} height={200} />
+                <div>
+                  <h3 className="gridTitleHomePage">
+                    {homePage.featuresHeader4}
+                  </h3>
+                  <p className="gridTextHomePage ">{homePage.featuresText4}</p>
                 </div>
-                <div className="bg-blue-500  px-4 py-2">
-                  <h3>{homePage.featuresHeader4}</h3>
-                  <p>{homePage.featuresText4}</p>
+                <div className="imgGridDivStyling">
+                  <img src="/88.png" alt="HEJ" className="imgInGridHomePage " />
                 </div>
-                <div className="px-4 py-2">
-                  <Image src="/88.png" alt="HEJ" width={300} height={200} />
+                <div>
+                  <h3 className="gridTitleHomePage">
+                    {homePage.featuresHeader5}
+                  </h3>
+                  <p className="gridTextHomePage ">{homePage.featuresText5}</p>
                 </div>
-                <div className="bg-blue-500  px-4 py-2">
-                  <h3>{homePage.featuresHeader5}</h3>
-                  <p>{homePage.featuresText5}</p>
+                <div className="imgGridDivStyling">
+                  <img src="/99.png" alt="HEJ" className="imgInGridHomePage " />
                 </div>
-                <div className="px-4 py-2">
-                  <Image src="/99.png" alt="HEJ" width={300} height={200} />
-                </div>
-                <div className="bg-blue-500 px-4 py-2">
-                  <h3>{homePage.featuresHeader6}</h3>
-                  <p>{homePage.featuresText6}</p>
+                <div>
+                  <h3 className="gridTitleHomePage">
+                    {homePage.featuresHeader6}
+                  </h3>
+                  <p className="gridTextHomePage ">{homePage.featuresText6}</p>
                 </div>
               </div>
 
+              {/* price part */}
               <div className="mt-52">
                 <h2 className="text-center text-3xl font-bold tracking-wide text-white pb-3 pt-3">
                   PRICING PLANS AND PACKAGES

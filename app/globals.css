@@ -40,3 +40,18 @@ body {
 .priceText {
   @apply text-center text-lg font-thin tracking-wide text-white pb-6;
 }
+
+.imgInGridHomePage {
+  @apply h-20 w-auto object-contain;
+}
+.imgGridDivStyling {
+  @apply w-auto flex lg:justify-center;
+}
+
+.gridTextHomePage {
+  @apply xl:pr-20;
+}
+
+.gridTitleHomePage {
+  @apply text-xl font-bold tracking-wide text-white pb-1;
+}
