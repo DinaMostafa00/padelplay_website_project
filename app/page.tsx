@@ -39,7 +39,7 @@ export default async function Home() {
       {homePage.map((homePage) => (
         <div key={homePage._id}>
           {/* hero section */}
-          <div className="relative h-screen">
+          {/* <div className="relative h-screen">
             <section className=" sticky h-screen top-0 mx-auto flex  items-center justify-between px-8">
               <div>
                 <video
@@ -52,25 +52,74 @@ export default async function Home() {
                 </video>
 
                 <div className=" fixed bottom-22 left-20 ">
-                  {/* <h1 className="relvant text-left text-3 font-semibold tracking-wide lg:text-4xl xl:text-5xl text-white z-10 pb-5 ml-2">
-                  {homePage.heroText}
-                </h1> */}
-                  <h1 className="text-2xl md:text-4xl xl:text-5xl bottom-30 left-0 mb-2 mr-50 whitespace-wrap">
+                  <h1 className="text-2xl font-bold md:text-4xl xl:text-5xl bottom-32 left-0 mx-6 xl:mr-60">
                     {homePage.heroText}
                   </h1>
 
-                  <button className=" sticky bg-transparent border border-yellow-500 text-white py-4 px-8 font-bold hover:bg-gray-100 transition-colors duration-300 ease-in-out hover:text-yellow-500">
-                    Get started
+                  <button className=" sticky bg-transparent border border-yellow-500 text-white py-4 px-8 font-base hover:bg-gray-100 transition-colors duration-300 ease-in-out hover:text-yellow-500">
+                    GET STARTED
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div> */}
+          {/* //2 */}
+          {/* <div className="relative ">
+            <section className=" sticky h-screen top-0 mx-auto flex  items-center justify-between px-8">
+              <div>
+                <video
+                  className="fixed top-0 left-0 w-full h-full object-cover z-0"
+                  autoPlay
+                  muted
+                  loop
+                >
+                  <source src="/v1.mp4" type="video/mp4" />
+                </video>
+
+                <div className=" fixed bottom-22 left-20 ">
+                  <h1 className="text-2xl font-bold md:text-4xl xl:text-5xl bottom-32 left-0 mx-6 xl:mr-60">
+                    {homePage.heroText}
+                  </h1>
+
+                  <button className=" sticky bg-transparent border border-yellow-500 text-white py-4 px-8 font-base hover:bg-gray-100 transition-colors duration-300 ease-in-out hover:text-yellow-500">
+                    GET STARTED
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div> */}
+          <div className="relative ">
+            <section className=" sticky h-min top-0 mx-auto flex  items-center justify-between px-8">
+              <div>
+                <video
+                  className="relative top-0 left-0 w-full h-full object-cover z-0"
+                  autoPlay
+                  muted
+                  loop
+                >
+                  <source src="/v1.mp4" type="video/mp4" />
+                </video>
+
+                <div className=" fixed bottom-22 left-20 ">
+                  <h1 className="text-2xl font-bold md:text-4xl xl:text-5xl bottom-32 left-0 mx-6 xl:mr-60">
+                    {homePage.heroText}
+                  </h1>
+
+                  <button className=" sticky bg-transparent border border-yellow-500 text-white py-4 px-8 font-base hover:bg-gray-100 transition-colors duration-300 ease-in-out hover:text-yellow-500">
+                    GET STARTED
                   </button>
                 </div>
               </div>
             </section>
           </div>
+
+          {/* hero section */}
+
           {/* hero section ends here */}
 
           {/* mid section */}
-
-          <section className="relative z-40 -mt[-100vh] bg-gradient-to-tr from-black via-black to-[#614944] mb-25 px-3  md:px-10 lg:px-20">
+          <section className="relative z-40 -mt[100vh] bg-gradient-to-tr from-black via-black to-[#614944] mb-25 px-3  md:px-10 lg:px-20">
+            {/* <section className="absolute z-40 -mt[-100vh] bg-gradient-to-tr from-black via-black to-[#614944] mb-25 px-3  md:px-10 lg:px-20 "> */}
             <div className="mx-3  md:mx-10 lg:mx-20">
               <div className="space-y-7 py-20">
                 <h1 className="text-center font-semibold tracking-wide text-white text-xl md:text-2xl lg:text-3xl">
@@ -160,7 +209,7 @@ export default async function Home() {
                 </p>
               </div>
 
-              <div className="mt-1 mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="mt-1 mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-32">
                 <div className="priceBox">
                   <h3 className="priceTitle">BASIC</h3>
                   <p className="priceText">{homePage.priceTextBasic}</p>

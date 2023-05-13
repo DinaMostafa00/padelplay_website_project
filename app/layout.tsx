@@ -56,7 +56,8 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        <footer className="bg-white text-black">
+        <footer className="bg-white text-black ">
+          {/*  */}
           <div className="max-w-3xl mx-auto py-10">
             <Link className="headerLink" href="/product">
               {" PRODUCT"}
