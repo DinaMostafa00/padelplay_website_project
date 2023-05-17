@@ -36,7 +36,7 @@ export async function getHomePage(): Promise<homePage[]> {
 
 export async function getBlog(): Promise<blog[]> {
   return createClient(config).fetch(groq`
-        *[_type == "blog"] {
+  *[_type == "blog"] | order(_createdAt desc) {
           _id,
           _createdAt,
           name,
