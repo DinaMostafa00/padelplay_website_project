@@ -26,6 +26,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.defaultSpacing {
+  @apply px-3  md:px-10 lg:px-20;
+}
+
+.backGround {
+  @apply bg-gradient-to-tr from-black via-black to-[#614944];
+}
+
+/* //homePageStyling */
 .priceBox {
   @apply border border-yellow-500 mt-10 mb-20 p-6 hover:bg-[#D9D9D9]/[.2] flex flex-col items-center justify-center;
 }
@@ -55,3 +64,22 @@ body {
 .gridTitleHomePage {
   @apply text-xl font-bold tracking-wide text-white pb-1;
 }
+/* //homePageStyling */
+
+/* contactUsPage */
+.contactUsform {
+  @apply border border-yellow-500 bg-transparent  py-4 px-3  mt-5 mb-5  hover:bg-[#D9D9D9]/[.2]  items-center justify-center;
+}
+
+.contactUsDivs {
+  @apply flex mb-6;
+}
+
+.contactUsText {
+  @apply font-thin hover:text-yellow-500;
+}
+
+.contactUsIcons {
+  @apply h-20 w-auto object-contain mr-2;
+}
+/* contactUsPage */

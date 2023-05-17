@@ -89,7 +89,7 @@ export default async function Home() {
             </section>
           </div> */}
           <div className="relative ">
-            <section className=" sticky h-min top-0 mx-auto flex  items-center justify-between px-8">
+            <section className=" sticky h-min top-0 mx-auto flex  items-center justify-between">
               <div>
                 <video
                   className="relative top-0 left-0 w-full h-full object-cover z-0"
