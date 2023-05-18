@@ -64,6 +64,10 @@ body {
 .gridTitleHomePage {
   @apply text-xl font-bold tracking-wide text-white pb-1;
 }
+
+.transparentButton {
+  @apply bg-transparent border border-yellow-500  py-4 px-8  hover:bg-gray-100 transition-colors duration-300 ease-in-out hover:text-yellow-500;
+}
 /* //homePageStyling */
 
 /* contactUsPage */
@@ -88,10 +92,10 @@ body {
 
 .latestBlog {
   @apply absolute flex justify-between
-   p-2 md:p-6 bottom-0 left-0 w-full h-1/6 bg-black bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-50  text-white hover:text-black lg:font-bold md:text-2xl text-sm;
+   p-2 md:p-6 bottom-0 left-0 w-full h-1/6 bg-black bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-50  text-white hover:text-black lg:font-bold md:text-xl text-sm;
 }
 
 .otherBlog {
-  @apply absolute p-2 lg:p-4  bottom-0 left-0  w-full h-1/6 bg-black bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-50  text-white hover:text-black lg:font-bold md:text-2xl text-sm;
+  @apply absolute p-2 lg:p-4  bottom-0 left-0  w-full h-1/6 bg-black bg-opacity-50 hover:bg-yellow-500 hover:bg-opacity-50  text-white hover:text-black lg:font-bold  sm:text-lg md:text-xl text-sm;
 }
 /* blog */

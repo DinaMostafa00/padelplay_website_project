@@ -52,7 +52,7 @@ export default async function Blog() {
                   alt={blog.name}
                   width={750}
                   height={300}
-                  className="oobject-fit"
+                  className="object-fit"
                 />
                 <div className="otherBlog">
                   <h2 className="">{blog.name}</h2>

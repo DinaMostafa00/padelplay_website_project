@@ -7,6 +7,7 @@ const blog = {
       name: "name",
       title: "Name",
       type: "string",
+      maxLengh: 50,
       validation: (Rule: any) => Rule.required(),
     },
     {
@@ -14,6 +15,7 @@ const blog = {
       title: "Slug",
       type: "slug",
       options: { source: "name" },
+      maxLengh: 50,
       validation: (Rule: any) => Rule.required(),
     },
     {
@@ -28,6 +30,11 @@ const blog = {
           type: "string",
         },
       ],
+    },
+    {
+      name: "imgCredit",
+      title: "Img Credit",
+      type: "string",
     },
     {
       name: "content",
