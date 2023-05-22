@@ -15,18 +15,18 @@ export default async function choosePlan() {
         >
           <input
             type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="First Name"
+            id="arenaName"
+            name="arenaName"
+            placeholder="Arena Name*"
             className="contactUsform w-full lg:w-[49%] lg:mr-1"
             required
           />
 
           <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            placeholder="Last Name"
+            type="phone number"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Phone Number*"
             className="contactUsform  w-full lg:w-[49%] lg:mr-1"
             required
           />
@@ -35,18 +35,63 @@ export default async function choosePlan() {
             type="email"
             id="email"
             name="email"
-            placeholder="E-mail"
+            placeholder="E-mail*"
+            className="contactUsform w-full "
+            required
+          />
+          <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="country*"
             className="contactUsform w-full "
             required
           />
 
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Message"
-            className="  contactUsform w-full"
-            rows="6"
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Address*"
+            className="contactUsform w-full "
             required
+          />
+
+          <select
+            name="duration"
+            id="duration"
+            className="contactUsform w-full lg:w-[49%] lg:mr-1"
+            required
+          >
+            <option disabled selected value="">
+              duration*
+            </option>
+            <option>12 Month</option>
+            <option>24 month + 20% off</option>
+          </select>
+
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            placeholder="quantity*"
+            className="contactUsform  w-full lg:w-[49%] lg:mr-1"
+            required
+          />
+          <input
+            type="extras"
+            id="extras"
+            name="extras"
+            placeholder="Extras"
+            className="contactUsform w-full "
+          />
+
+          <textarea
+            id="additionalInformation"
+            name="additionalInformation"
+            placeholder="Additional Information"
+            className="  contactUsform w-full"
+            // rows="3"
           ></textarea>
 
           <div className="flex justify-end">

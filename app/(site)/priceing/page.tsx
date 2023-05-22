@@ -226,7 +226,7 @@ export default async function pricePage() {
               <td className=" colSpacing priceTableCol"></td>
 
               <td className=" colSpacing priceTableCol">
-                <Link href="/choosePlan">
+                <Link href="/choosePlanBasic">
                   <button className=" transparentButtonPricePage ">
                     {"GET IT NOW"}
                   </button>
