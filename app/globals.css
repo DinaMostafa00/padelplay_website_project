@@ -102,7 +102,30 @@ body {
 
 /* price */
 
+.tableHeader {
+  @apply px-2  py-6 w-1/6;
+}
+.priceText {
+  @apply text-center;
+}
+
+.featuresColText {
+  @apply text-left;
+}
+
 .priceTableCol {
   @apply border-l-2 border-r-2 border-yellow-500;
+}
+
+.headersInfo {
+  @apply font-bold;
+}
+
+.transparentButtonPricePage {
+  @apply bg-transparent border border-yellow-500 py-1 px-2 md:py-4 md:px-8  hover:bg-gray-100 transition-colors duration-300 ease-in-out hover:text-yellow-500;
+}
+
+.colSpacing {
+  @apply px-4 py-2;
 }
 /* price */
