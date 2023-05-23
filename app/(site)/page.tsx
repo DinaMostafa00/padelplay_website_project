@@ -210,7 +210,7 @@ export default async function Home() {
               </div>
 
               <div className="mt-1 mb-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-32">
-                <div className="priceBox">
+                <div className="pricecoBox">
                   <h3 className="priceTitle">BASIC</h3>
                   <p className="priceText">{homePage.priceTextBasic}</p>
                   <Link className="headerLink" href="/prices">

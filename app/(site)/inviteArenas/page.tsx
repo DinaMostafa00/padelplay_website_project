@@ -1,10 +1,10 @@
 import React from "react";
 
-export default async function choosePlan() {
+export default async function inviteArenas() {
   return (
     <div>
       <h1 className="flex justify-center text-xl font-bold md:text-2xl  my-10 xl:my-15">
-        {"Bring our streaming service to your arena"}
+        {"Bring our streaming to your arena"}
       </h1>
 
       <div>
@@ -35,10 +35,10 @@ export default async function choosePlan() {
             type="email"
             id="email"
             name="email"
-            placeholder="E-mail*"
+            placeholder="E-mail"
             className="contactUsform w-full "
-            required
           />
+
           <input
             type="text"
             id="country"
@@ -57,61 +57,12 @@ export default async function choosePlan() {
             required
           />
 
-          <select
-            name="plan"
-            id="plan"
-            className="contactUsform w-full "
-            required
-          >
-            <option disabled selected value="">
-              {"Plan*"}
-            </option>
-            <option>{"BASIC"}</option>
-            <option> {"ESSENTIAL"}</option>
-            <option> {"PREMIUM"}</option>
-          </select>
-
-          <select
-            name="duration"
-            id="duration"
-            className="contactUsform w-full lg:w-[49%] lg:mr-1"
-            required
-          >
-            <option disabled selected value="">
-              {"duration*"}
-            </option>
-            <option>{"12 Month"}</option>
-            <option>{"24 month + 20% off"}</option>
-          </select>
-
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            placeholder="quantity*"
-            className="contactUsform  w-full lg:w-[49%] lg:mr-1"
-            min="1"
-            max="10"
-            required
-          />
-
-          <select id="extras" name="extras" className="contactUsform w-full">
-            <option disabled selected value="">
-              {"Extras"}
-            </option>
-            <option>{"none"}</option>
-            <option>{"Youtube channel (600krmonth)"}</option>
-            <option>
-              {"Commentators (350kr/month)+ Youtube channel (600krmonth)"}
-            </option>
-          </select>
-
           <textarea
             id="additionalInformation"
             name="additionalInformation"
             placeholder="Additional Information"
             className="  contactUsform w-full"
-            // rows="3"
+            rows="3"
           ></textarea>
 
           <div className="flex justify-end">

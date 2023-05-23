@@ -4,6 +4,7 @@ import { product } from "@/types/product";
 import { contactUs } from "@/types/contactUs";
 import { createClient, groq } from "next-sanity";
 import config from "./config/client-config";
+import { arenas } from "@/types/arenas";
 
 export async function getHomePage(): Promise<homePage[]> {
   return createClient(config).fetch(groq`
@@ -74,12 +75,12 @@ export async function getProductPage(): Promise<product[]> {
             name,
             "slug": slug.current,
             headerInfo,
-            "videoUrl": video.asset->url,
+            "videoUrl": videoUrl.asset->url,
             text1,
-            "image1":image.asset->url,
-            "image2":image.asset->url,
+            "image1":image1.asset->url,
+            "image2":image2.asset->url,
             text2,
-            "image3":image.asset->url,
+            "image3":image3.asset->url,
             text3,
             }`);
 }
@@ -96,4 +97,17 @@ export async function getContacUstPage(): Promise<contactUs[]> {
             email2,
             phoneNumber,
             }`);
+}
+
+export async function getArenas(): Promise<arenas[]> {
+  return createClient(config).fetch(groq`
+  *[_type == "arenas"] | order(_createdAt desc) {
+          _id,
+          _createdAt,
+          name,
+          "slug": slug.current,
+          "image": image.asset->url,
+          alt,
+          url,
+        }`);
 }
