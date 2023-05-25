@@ -7,6 +7,7 @@ import Link from "next/link";
 type Props = {
   params: { blog: string };
 };
+
 export default async function blogPage({ params }: Props) {
   const slug = params.blog;
   const blog = await getBlogPage(slug);
@@ -24,6 +25,7 @@ export default async function blogPage({ params }: Props) {
           height={300}
           className="mx-auto "
         />
+
         <p className="font-thin text-gray-600 italic pl-3  lg:pl-64  ">
           {blog.imgCredit}
         </p>
@@ -32,8 +34,16 @@ export default async function blogPage({ params }: Props) {
       <div className="flex-col items-center px-3 lg:px-48">
         <PortableText value={blog.content} />
       </div>
-      <p className="font-thin text-gray-600 italic pl-3  lg:pl-64  ">
+      {/* <p className="font-thin text-gray-600 italic pl-3  lg:pl-64  ">
         {blog.createdAt}
+      </p> */}
+
+      <p className="font-thin text-gray-600 italic pl-3 lg:pl-64">
+        {new Date(blog.createdAt).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "numeric",
+          day: "numeric",
+        })}
       </p>
 
       <p className="font-bold pt-9"> {"CONNECT ON SOCIAL MEDIA"}</p>

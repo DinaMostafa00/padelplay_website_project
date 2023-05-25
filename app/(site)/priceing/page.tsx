@@ -11,6 +11,7 @@ export default async function pricePage() {
           "Our pricing plans are designed to fit your needs, Choose from our flexible subscription options and enjoy high quality streaming and reliable performance."
         }
       </p>
+
       <div className="overflow-x-auto hidden md:contents">
         <table className=" w-full   border-collapse border-2  border-yellow-500  mb-20">
           <thead>

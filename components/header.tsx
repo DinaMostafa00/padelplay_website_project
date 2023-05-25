@@ -19,17 +19,17 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="hidden flex-1 items-center justify-center space-x-8 lg:flex">
-          <Link className="headerLink" href="/product">
+        <div className="hidden flex-1 items-center justify-center space-x-8 lg:flex ">
+          <Link className="hover:text-yellow-500" href="/product">
             {" PRODUCT"}
           </Link>
-          <Link className="headerLink" href="/priceing">
+          <Link className="hover:text-yellow-500" href="/priceing">
             {"PRICES "}
           </Link>
-          <Link className="headerLink" href="/arenas">
+          <Link className="hover:text-yellow-500" href="/arenas">
             {"      ARENAS"}
           </Link>
-          <Link className="headerLink" href="/blog">
+          <Link className="hover:text-yellow-500" href="/blog">
             {"  BLOG "}
           </Link>
         </div>
@@ -74,19 +74,19 @@ export const Header = () => {
                 </div>
                 <div className=" mt-6  ">
                   <nav className="grid gap-y-8">
-                    <Link className="" href="/">
+                    <Link className="hover:text-yellow-500" href="/">
                       {" HOME"}
                     </Link>
-                    <Link className="" href="/product">
+                    <Link className="hover:text-yellow-500" href="/product">
                       {" PRODUCT"}
                     </Link>
-                    <Link className="" href="/priceing">
+                    <Link className="hover:text-yellow-500" href="/priceing">
                       {"PRICES "}
                     </Link>
-                    <Link className="" href="/arenas">
+                    <Link className="hover:text-yellow-500" href="/arenas">
                       {"      ARENAS"}
                     </Link>
-                    <Link className="" href="/blog">
+                    <Link className="hover:text-yellow-500" href="/blog">
                       {"  BLOG "}
                     </Link>
                     <div className="flex justify-center">

@@ -8,11 +8,11 @@ export default async function productPage() {
     <div>
       {contactUs.map((contactUs) => (
         <div key={contactUs._id} className="defaultSpacing  ">
-          <h1 className="text-2xl font-bold md:text-3xl  mb-10 xl:mb-15 text-yellow-500 ">
+          <h1 className="text-lg font-bold md:text-3xl  mb-10 xl:mb-15 text-yellow-500 ml-7 ">
             {"CONTACT US"}
           </h1>
 
-          <div className="lg:grid grid-cols-[400px_minmax(80px,_2fr)] gap-4 ">
+          <div className="lg:grid grid-cols-[400px_minmax(80px,_2fr)] gap-4 pb-20">
             <div>
               <div className="contactUsDivs">
                 <img src="/icon1.svg" alt="HEJ" className="contactUsIcons" />
@@ -39,7 +39,7 @@ export default async function productPage() {
               </div>
             </div>
 
-            <div>
+            <div className="">
               <form
                 action="https://formsubmit.co/el/jasugu"
                 method="POST"
