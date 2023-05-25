@@ -10,8 +10,9 @@ type Props = {
 export default async function blogPage({ params }: Props) {
   const slug = params.blog;
   const blog = await getBlogPage(slug);
+
   return (
-    <div className="defaultSpacing backGround py-10 ">
+    <div className="defaultSpacing  py-10 ">
       <h1 className=" font-bold  text-lg lg:text-2xl py-2  lg:py-7 flex justify-center">
         {blog.name}
       </h1>
@@ -31,7 +32,11 @@ export default async function blogPage({ params }: Props) {
       <div className="flex-col items-center px-3 lg:px-48">
         <PortableText value={blog.content} />
       </div>
-      <p className="font-bold pt-9"> CONNECT ON SOCIAL MEDIA</p>
+      <p className="font-thin text-gray-600 italic pl-3  lg:pl-64  ">
+        {blog.createdAt}
+      </p>
+
+      <p className="font-bold pt-9"> {"CONNECT ON SOCIAL MEDIA"}</p>
       <div className=" md:flex md:justify-between">
         <div className="flex items-center mb-4">
           <Link href={"https://www.instagram.com/padelplay.nu/"}>
@@ -50,7 +55,7 @@ export default async function blogPage({ params }: Props) {
           </Link>
         </div>
         <Link href={"/blog"}>
-          <button className="transparentButton">READ MORE ARTICLES</button>
+          <button className="transparentButton">{"READ MORE ARTICLES"}</button>
         </Link>
       </div>
     </div>

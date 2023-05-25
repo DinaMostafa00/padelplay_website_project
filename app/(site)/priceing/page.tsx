@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default async function pricePage() {
   return (
-    <div className="defaultSpacing backGround py-10">
+    <div className="defaultSpacing py-10">
       <h1 className="flex justify-center font-bold text-2xl pt-10  ">
         {"PLANS FOR ALL PACKAGES "}
       </h1>
@@ -12,7 +12,7 @@ export default async function pricePage() {
         }
       </p>
       <div className="overflow-x-auto hidden md:contents">
-        <table className=" w-full   border-collapse border-2  border-yellow-500 ">
+        <table className=" w-full   border-collapse border-2  border-yellow-500  mb-20">
           <thead>
             <tr>
               <th className="text-left p-4 w-1/6 ">{"FEATURES"}</th>
@@ -163,7 +163,7 @@ export default async function pricePage() {
                   </button>
                 </Link>
               </td>
-              <td className="colSpacing priceTableCol  ">
+              <td className=" colSpacing priceTableCol  ">
                 <Link href="/choosePlan">
                   <button className=" transparentButtonPricePage ">
                     {"GET IT NOW"}
@@ -225,8 +225,8 @@ export default async function pricePage() {
             <tr className="priceText ">
               <td className=" colSpacing priceTableCol"></td>
 
-              <td className=" colSpacing priceTableCol">
-                <Link href="/choosePlanBasic">
+              <td className=" colSpacing priceTableCol ">
+                <Link href="/choosePlan">
                   <button className=" transparentButtonPricePage ">
                     {"GET IT NOW"}
                   </button>
@@ -263,6 +263,7 @@ export default async function pricePage() {
         </table>
       </div>
 
+      {/* small screen rendered here */}
       <div className="md:hidden">
         <div className="grid grid-cols-1 gap-4">
           {/* card One */}
@@ -399,7 +400,7 @@ export default async function pricePage() {
             <p className="text-yellow-500 font-bold mt-4">
               {"Price: 1500kr/month"}
             </p>
-            <p className="font-bold">{"Extras: ---"}</p>
+            <p className="font-bold">{"Extras: --- "}</p>
             <p className="text-center text-yellow-500 font-bold pt-6">
               {"Total Price: 1500kr/month"}
             </p>

@@ -6,20 +6,20 @@ export default async function Home() {
   const arenas = await getArenas();
 
   return (
-    <div className="backGround defaultSpacing">
+    <div className=" defaultSpacing pb-20">
       <h2 className="mt-24 font-bold flex justify-center text-3xl">
-        {"Our partner arenas"}
+        {"OUR PARTNER ARENAS"}
       </h2>
       <div className="borderBox flex justify-center ">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 lg:py-5">
           {arenas.map((arenas) => (
             <Link href={arenas.url} className="hover:scale-105">
-              <div className="h-64">
+              <div className="h-54">
                 {arenas.image && (
                   <Image
                     src={arenas.image}
                     alt={arenas.name}
-                    width={250}
+                    width={200}
                     height={100}
                     className="object-cover"
                   />

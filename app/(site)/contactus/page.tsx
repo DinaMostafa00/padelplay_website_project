@@ -7,9 +7,9 @@ export default async function productPage() {
   return (
     <div>
       {contactUs.map((contactUs) => (
-        <div key={contactUs._id} className="defaultSpacing backGround ">
-          <h1 className="text-2xl font-bold md:text-5xl  mb-10 xl:mb-15">
-            CONTACT US
+        <div key={contactUs._id} className="defaultSpacing  ">
+          <h1 className="text-2xl font-bold md:text-3xl  mb-10 xl:mb-15 text-yellow-500 ">
+            {"CONTACT US"}
           </h1>
 
           <div className="lg:grid grid-cols-[400px_minmax(80px,_2fr)] gap-4 ">

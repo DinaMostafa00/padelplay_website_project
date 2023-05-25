@@ -67,7 +67,10 @@ export async function getBlogPage(slug: string): Promise<blog> {
   );
 }
 
-export async function getProductPage(): Promise<product[]> {
+export async function getProductPage(
+  time: Number = 0,
+  shouldError: Boolean = false
+): Promise<product[]> {
   return createClient(config).fetch(groq`
         *[_type == "product"] {
             _id,
