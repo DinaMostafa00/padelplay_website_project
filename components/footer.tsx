@@ -6,16 +6,16 @@ export const Footer = () => {
   return (
     <footer className="bg-white text-black defaultSpacing">
       <div className="max-w-3xl mx-auto py-10 flex justify-between">
-        <Link className="headerLink" href="/product">
+        <Link className="hover:text-yellow-500" href="/product">
           {" PRODUCT"}
         </Link>
-        <Link className="headerLink" href="/priceing">
+        <Link className="hover:text-yellow-500" href="/priceing">
           {"PRICES "}
         </Link>
-        <Link className="headerLink" href="/arenas">
+        <Link className="hover:text-yellow-500" href="/arenas">
           {"ARENAS"}
         </Link>
-        <Link className="headerLink" href="/blog">
+        <Link className="hover:text-yellow-500" href="/blog">
           {"  BLOG "}
         </Link>
       </div>
