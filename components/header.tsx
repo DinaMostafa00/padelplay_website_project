@@ -6,8 +6,19 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 // import { Fragment } from "react-is/node_modules/@types/react";
 import { Fragment } from "react";
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+
+const middleHeaderLinks = [
+  { href: "/product", label: "PRODUCT" },
+  { href: "/priceing", label: "PRICES " },
+  { href: "/arenas", label: "ARENAS" },
+  { href: "/blog", label: " BLOG" },
+];
 
 export const Header = () => {
+  const path = usePathname();
+
   return (
     <Popover>
       <header className="relative top-0 z-30 flex w-full items-center justify-between bg-transparent py-10 ">
@@ -19,20 +30,26 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="hidden flex-1 items-center justify-center space-x-8 lg:flex ">
-          <Link className="hover:text-yellow-500" href="/product">
-            {" PRODUCT"}
-          </Link>
-          <Link className="hover:text-yellow-500" href="/priceing">
-            {"PRICES "}
-          </Link>
-          <Link className="hover:text-yellow-500" href="/arenas">
-            {"      ARENAS"}
-          </Link>
-          <Link className="hover:text-yellow-500" href="/blog">
-            {"  BLOG "}
-          </Link>
-        </div>
+        <nav>
+          <ul className="hidden flex-1 items-center justify-center space-x-8 lg:flex ">
+            {middleHeaderLinks.map((middleHeaderLinks) => (
+              <li
+                key={middleHeaderLinks.href}
+                className="hover:text-yellow-500"
+              >
+                <Link className="relative" href={middleHeaderLinks.href}>
+                  {middleHeaderLinks.href === path && (
+                    <motion.span
+                      layoutId="underline"
+                      className="absolute left-0 top-full block h-[2px] w-full bg-yellow-500"
+                    />
+                  )}
+                  {middleHeaderLinks.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div className=" hidden relative cursor-pointer opacity-75 transition hover:opacity-100 px-10 mx-20  border-2 border-yellow-300 lg:flex">
           <Link className="headerLink" href="/contactus">

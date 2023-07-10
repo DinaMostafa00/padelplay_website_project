@@ -15,7 +15,7 @@ export default async function choosePlan() {
 
       <div>
         <form
-          action="https://formsubmit.co/el/jasugu"
+          action="https://formsubmit.co/el/zudobo"
           method="POST"
           className="max-w-lg mx-auto"
         >

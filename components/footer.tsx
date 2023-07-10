@@ -2,22 +2,26 @@ import { getContacUstPage } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import React from "react";
 
+const middleFooterLinks = [
+  { href: "/product", label: "PRODUCT" },
+  { href: "/priceing", label: "PRICES " },
+  { href: "/arenas", label: "ARENAS" },
+  { href: "/blog", label: " BLOG" },
+];
+
 export const Footer = () => {
   return (
     <footer className="bg-white text-black defaultSpacing">
       <div className="max-w-3xl mx-auto py-10 flex justify-between">
-        <Link className="hover:text-yellow-500" href="/product">
-          {" PRODUCT"}
-        </Link>
-        <Link className="hover:text-yellow-500" href="/priceing">
-          {"PRICES "}
-        </Link>
-        <Link className="hover:text-yellow-500" href="/arenas">
-          {"ARENAS"}
-        </Link>
-        <Link className="hover:text-yellow-500" href="/blog">
-          {"  BLOG "}
-        </Link>
+        <ul className="hidden flex-1 items-center justify-center space-x-8 lg:flex ">
+          {middleFooterLinks.map((middleFooterLinks) => (
+            <li key={middleFooterLinks.href} className="hover:text-yellow-500">
+              <Link href={middleFooterLinks.href}>
+                {middleFooterLinks.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
       {/*  contactUs data Rendered here */}
 

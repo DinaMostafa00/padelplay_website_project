@@ -15,7 +15,7 @@ export default async function inviteArenas() {
 
       <div className="pb-20">
         <form
-          action="https://formsubmit.co/el/jasugu"
+          action="https://formsubmit.co/el/zudobo"
           method="POST"
           className="max-w-lg mx-auto"
         >

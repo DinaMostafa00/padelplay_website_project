@@ -7,7 +7,7 @@ export default async function productPage() {
   return (
     <div>
       {contactUs.map((contactUs) => (
-        <div key={contactUs._id} className="defaultSpacing  ">
+        <div key={contactUs._id} className="defaultSpacing">
           <h1 className="text-lg font-bold md:text-3xl  mb-10 xl:mb-15 text-yellow-500 ml-7 ">
             {"CONTACT US"}
           </h1>
@@ -39,9 +39,11 @@ export default async function productPage() {
               </div>
             </div>
 
+            {/* <Contactform /> */}
+
             <div className="">
               <form
-                action="https://formsubmit.co/el/jasugu"
+                action="https://formsubmit.co/el/zudobo"
                 method="POST"
                 className="max-w-lg mx-auto"
               >
@@ -76,8 +78,7 @@ export default async function productPage() {
                   id="message"
                   name="message"
                   placeholder="Message"
-                  className="  contactUsform w-full"
-                  rows="6"
+                  className="  contactUsform w-full h-32"
                   required
                 ></textarea>
 
@@ -93,65 +94,4 @@ export default async function productPage() {
       ))}
     </div>
   );
-}
-
-{
-  /* <h1>CONTACT US </h1>
-          <div className="grid-cols-[100px_minmax(80px,_1fr)100px_minmax(80px,_1fr)] ">
-            <div>
-              <p>{contactUs.address}</p>
-
-              <p>{contactUs.email1}</p>
-
-              <p>{contactUs.email2}</p>
-
-              <p>{contactUs.phoneNumber}</p>
-            </div>
-
-            <div>
-              <form action="#" method="POST" className="max-w-lg mx-auto">
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="First Name"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  required
-                />
-
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  placeholder="Last Name"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  required
-                />
-
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="E-mail"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  required
-                />
-
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Message"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  required
-                ></textarea>
-
-                <button
-                  type="submit"
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  SEND
-                </button>
-              </form>
-            </div>
-          </div> */
 }
