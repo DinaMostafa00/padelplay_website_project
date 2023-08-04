@@ -1,3 +1,4 @@
+import ContactForm from "@/components/contactform";
 import { getContacUstPage } from "@/sanity/sanity-utils";
 import React from "react";
 
@@ -41,7 +42,9 @@ export default async function productPage() {
 
             {/* <Contactform /> */}
 
-            <div className="">
+            <ContactForm />
+
+            {/* <div className="">
               <form
                 action="https://formsubmit.co/el/zudobo"
                 method="POST"
@@ -88,7 +91,7 @@ export default async function productPage() {
                   </button>
                 </div>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       ))}
