@@ -7,15 +7,41 @@ export default function ContactForm() {
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState([]);
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-  };
+    console.log("firstName ", firstName);
+    console.log("lastName: ", lastName);
+    console.log("Email: ", email);
+    console.log("Message: ", message);
 
-  console.log("firstName ", firstName);
-  console.log("lastName: ", lastName);
-  console.log("Email: ", email);
-  console.log("Message: ", message);
+    const res = await fetch("api/contact", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        message,
+      }),
+    });
+
+    const { msg } = await res.json();
+    setError(msg);
+    console.log(error);
+    // setSuccess(success);
+
+    // if (success) {
+    //   setfirstName("");
+    //   setlastName("");
+    //   setEmail("");
+    //   setMessage("");
+    // }
+  };
 
   return (
     <div className="">
