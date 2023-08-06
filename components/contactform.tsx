@@ -1,59 +1,40 @@
 "use client";
-
 import { useState } from "react";
+import { FormEvent } from "react-is/node_modules/@types/react";
 
 export default function ContactForm() {
-  const [firstName, setfirstName] = useState("");
-  const [lastName, setlastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState([]);
-  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log("firstName ", firstName);
-    console.log("lastName: ", lastName);
-    console.log("Email: ", email);
-    console.log("Message: ", message);
 
-    const res = await fetch("api/contact", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        message,
-      }),
-    });
-
-    const { msg } = await res.json();
-    setError(msg);
-    console.log(error);
-    // setSuccess(success);
-
-    // if (success) {
-    //   setfirstName("");
-    //   setlastName("");
-    //   setEmail("");
-    //   setMessage("");
-    // }
+    try {
+      const res = await fetch("api/contact", {
+        method: "POST",
+        body: JSON.stringify({ firstName, lastName, email, message }),
+        headers: {
+          "content-type": "application/json",
+        },
+      });
+    } catch (err: any) {
+      console.log("Hey there is an error", err);
+    }
   };
 
   return (
     <div className="">
       <form
-        onSubmit={handleSubmit}
+        onSubmit={onSubmit}
         action="https://formsubmit.co/el/zudobo"
         method="POST"
         className="max-w-lg mx-auto"
       >
         <input
-          onChange={(e) => setfirstName(e.target.value)}
           value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
           type="text"
           id="firstName"
           name="firstName"
@@ -63,8 +44,8 @@ export default function ContactForm() {
         />
 
         <input
-          onChange={(e) => setlastName(e.target.value)}
           value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
           type="text"
           id="lastName"
           name="lastName"
@@ -74,8 +55,8 @@ export default function ContactForm() {
         />
 
         <input
-          onChange={(e) => setEmail(e.target.value)}
           value={email}
+          onChange={(e) => setEmail(e.target.value)}
           type="email"
           id="email"
           name="email"
@@ -85,8 +66,8 @@ export default function ContactForm() {
         />
 
         <textarea
-          onChange={(e) => setMessage(e.target.value)}
           value={message}
+          onChange={(e) => setMessage(e.target.value)}
           id="message"
           name="message"
           placeholder="Message"
@@ -100,12 +81,6 @@ export default function ContactForm() {
           </button>
         </div>
       </form>
-
-      {/* Error message */}
-      <div>
-        <div>Error message</div>
-      </div>
-      {/* Error message */}
     </div>
   );
 }
