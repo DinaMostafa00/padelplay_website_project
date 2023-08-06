@@ -12,15 +12,20 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      const res = await fetch("api/contact", {
+      const res = await fetch("/api/contact/", {
         method: "POST",
-        body: JSON.stringify({ firstName, lastName, email, message }),
         headers: {
-          "content-type": "application/json",
+          "Content-type": "application/json",
         },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          message,
+        }),
       });
     } catch (err: any) {
-      console.log("Hey there is an error", err);
+      console.error("Err", err);
     }
   };
 
