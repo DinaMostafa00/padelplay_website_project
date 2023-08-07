@@ -1,8 +1,10 @@
 "use client";
+import Link from "next/dist/client/link";
 import { useState } from "react";
 import { FormEvent } from "react-is/node_modules/@types/react";
 
 export default function ContactForm() {
+  const [isSubmitted, setSubmitted] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,12 +26,23 @@ export default function ContactForm() {
           message,
         }),
       });
+
+      if (res.status === 200) {
+        setSubmitted(true);
+      }
     } catch (err: any) {
       console.error("Err", err);
     }
   };
 
-  return (
+  return isSubmitted ? (
+    <div>
+      <h3>{"Thank you for your message! "}</h3>
+      <Link className="headerLink" href="/">
+        <button className="yellowButton">Back at the home page</button>
+      </Link>
+    </div>
+  ) : (
     <div className="">
       <form
         onSubmit={onSubmit}
