@@ -9,18 +9,23 @@ export async function POST(req: Request, res: Response) {
   console.log(body);
 
   const mailgun = new Mailgun(formData);
-  const client = mailgun.client({ username: "api", key: API_KEY });
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+    url: "https://api.eu.mailgun.net",
+  });
+
   const { firstName, lastName, email, message } = body;
 
   const messageData = {
-    from: "Contact Form <sandboxef2a0dc26edd434b8012b9368706ef18.mailgun.org>",
-    to: "playvioforms@gmail.com",
+    from: "Contact Form <contact@mail.plaivio.se>",
+    to: "playvioforms@gmail.com, dinayoussry96@gmail.com",
     subject: "New Contact Form!!",
     text: `Hello!!,
 
-    You have a new form entry from: ${firstName} ${lastName} , ${email}.
+    You have a new form entry from: Name: ${firstName} ${lastName} , E-mail: ${email}.
 
-    ${message}
+    Message:${message}
     `,
   };
 
