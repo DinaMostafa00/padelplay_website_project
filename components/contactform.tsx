@@ -36,10 +36,18 @@ export default function ContactForm() {
   };
 
   return isSubmitted ? (
-    <div>
-      <h3>{"Thank you for your message! "}</h3>
+    <div className="flex flex-col  items-center m-12  ">
+      <h3 className="text-center text-2xl font-bold  mb-2">
+        {"Thank you for reaching out to us!  "}
+      </h3>
+      <p className="text-center text-xl font-thin mb-10">
+        {
+          "Your message is on its way to us! Expect to hear from us soon. Thank you!! "
+        }
+      </p>
+
       <Link className="headerLink" href="/">
-        <button className="yellowButton">Back at the home page</button>
+        <button className="yellowButton">{"Back to the home page"}</button>
       </Link>
     </div>
   ) : (

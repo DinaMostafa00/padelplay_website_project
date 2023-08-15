@@ -13,7 +13,7 @@ export default async function productPage() {
             {"CONTACT US"}
           </h1>
 
-          <div className="lg:grid grid-cols-[400px_minmax(80px,_2fr)] gap-4 pb-20">
+          <div className="lg:grid grid-cols-[400px_minmax(80px,_2fr)] gap-4 pb-28 ">
             <div>
               <div className="contactUsDivs">
                 <img src="/icon1.svg" alt="HEJ" className="contactUsIcons" />
@@ -39,8 +39,6 @@ export default async function productPage() {
                 </p>
               </div>
             </div>
-
-            {/* <Contactform /> */}
 
             <ContactForm />
 

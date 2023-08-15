@@ -1,4 +1,6 @@
+import PriceSelection from "@/components/PriceSelection";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 
 export default async function choosePlan() {
@@ -14,11 +16,7 @@ export default async function choosePlan() {
       </h1>
 
       <div>
-        <form
-          action="https://formsubmit.co/el/zudobo"
-          method="POST"
-          className="max-w-lg mx-auto"
-        >
+        <form method="POST" className="max-w-lg mx-auto">
           <input
             type="text"
             id="arenaName"
@@ -63,7 +61,8 @@ export default async function choosePlan() {
             required
           />
 
-          <select
+          <PriceSelection />
+          {/* <select
             name="plan"
             id="plan"
             className="contactUsform w-full "
@@ -75,7 +74,8 @@ export default async function choosePlan() {
             <option>{"BASIC"}</option>
             <option> {"ESSENTIAL"}</option>
             <option> {"PREMIUM"}</option>
-          </select>
+           
+          </select> */}
 
           <select
             name="duration"

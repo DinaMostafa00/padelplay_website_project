@@ -11,7 +11,7 @@ const middleFooterLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-white text-black defaultSpacing">
+    <footer className="bg-white text-black defaultSpacing  ">
       <div className="max-w-3xl mx-auto py-10 flex justify-between">
         <ul className="hidden flex-1 items-center justify-center space-x-8 lg:flex ">
           {middleFooterLinks.map((middleFooterLinks) => (

@@ -26,7 +26,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200"
         />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
