@@ -1,4 +1,4 @@
-import PriceSelection from "@/components/PriceSelection";
+import PriceSelection from "@/components/priceSelection";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import React from "react";
