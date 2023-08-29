@@ -163,14 +163,28 @@ export default function PricingPageLargeScreenTable() {
             </Link>
           </td>
           <td className=" colSpacing priceTableCol  ">
-            <Link href="/choosePlan">
+            <Link
+              href={{
+                pathname: "/choosePlan",
+                query: {
+                  selectedPlan: "ESSENTIAL",
+                },
+              }}
+            >
               <button className=" transparentButtonPricePage ">
                 {"GET IT NOW"}
               </button>
             </Link>
           </td>
           <td className=" colSpacing priceTableCol  ">
-            <Link href="/choosePlan">
+            <Link
+              href={{
+                pathname: "/choosePlan",
+                query: {
+                  selectedPlan: "PREMIUM",
+                },
+              }}
+            >
               <button className=" transparentButtonPricePage ">
                 {"GET IT NOW"}
               </button>
@@ -226,21 +240,50 @@ export default function PricingPageLargeScreenTable() {
           <td className=" colSpacing priceTableCol"></td>
 
           <td className=" colSpacing priceTableCol ">
-            <Link href="/choosePlan">
+            {/* <Link href="/choosePlan"> */}
+            <Link
+              href={{
+                pathname: "/choosePlan",
+                query: {
+                  selectedPlan: "BASIC",
+                  selectedDuration: "24 month + 20% off",
+                  selectedExtra:
+                    "Commentators (350kr/month)+ Youtube channel (600krmonth)",
+                },
+              }}
+            >
               <button className=" transparentButtonPricePage ">
                 {"GET IT NOW"}
               </button>
             </Link>
           </td>
           <td className=" colSpacing priceTableCol">
-            <Link href="/choosePlan">
+            <Link
+              href={{
+                pathname: "/choosePlan",
+                query: {
+                  selectedPlan: "ESSENTIAL",
+                  selectedDuration: "24 month + 20% off",
+                  selectedExtra: "Youtube channel (600krmonth)",
+                },
+              }}
+            >
               <button className=" transparentButtonPricePage ">
                 {"GET IT NOW"}
               </button>
             </Link>
           </td>
           <td className="colSpacing priceTableCol">
-            <Link href="/choosePlan">
+            <Link
+              href={{
+                pathname: "/choosePlan",
+                query: {
+                  selectedPlan: "PREMIUM",
+                  selectedDuration: "24 month + 20% off",
+                  selectedExtra: "none",
+                },
+              }}
+            >
               <button className=" transparentButtonPricePage">
                 {"GET IT NOW"}
               </button>

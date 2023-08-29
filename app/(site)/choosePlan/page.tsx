@@ -1,3 +1,5 @@
+import DurationSelection from "@/components/durationSelection";
+import ExtraSelection from "@/components/extraSelection";
 import PriceSelection from "@/components/priceSelection";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -77,7 +79,8 @@ export default async function choosePlan() {
            
           </select> */}
 
-          <select
+          <DurationSelection />
+          {/* <select
             name="duration"
             id="duration"
             className="contactUsform w-full lg:w-[49%] lg:mr-1"
@@ -88,7 +91,7 @@ export default async function choosePlan() {
             </option>
             <option>{"12 Month"}</option>
             <option>{"24 month + 20% off"}</option>
-          </select>
+          </select> */}
 
           <input
             type="number"
@@ -101,7 +104,9 @@ export default async function choosePlan() {
             required
           />
 
-          <select id="extras" name="extras" className="contactUsform w-full">
+          <ExtraSelection />
+
+          {/* <select id="extras" name="extras" className="contactUsform w-full">
             <option disabled selected value="">
               {"Extras"}
             </option>
@@ -110,7 +115,7 @@ export default async function choosePlan() {
             <option>
               {"Commentators (350kr/month)+ Youtube channel (600krmonth)"}
             </option>
-          </select>
+          </select> */}
 
           <textarea
             id="additionalInformation"
