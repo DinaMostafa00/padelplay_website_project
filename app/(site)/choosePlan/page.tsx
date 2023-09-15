@@ -1,3 +1,4 @@
+import choosePlanForm from "@/components/choosePlanForm";
 import DurationSelection from "@/components/durationSelection";
 import ExtraSelection from "@/components/extraSelection";
 import PriceSelection from "@/components/priceSelection";
@@ -17,7 +18,9 @@ export default async function choosePlan() {
         {"Bring our streaming service to your arena"}
       </h1>
 
-      <div>
+      <ChoosePlanForm />
+
+      {/* <div>
         <form method="POST" className="max-w-lg mx-auto">
           <input
             type="text"
@@ -64,34 +67,8 @@ export default async function choosePlan() {
           />
 
           <PriceSelection />
-          {/* <select
-            name="plan"
-            id="plan"
-            className="contactUsform w-full "
-            required
-          >
-            <option disabled selected value="">
-              {"Plan*"}
-            </option>
-            <option>{"BASIC"}</option>
-            <option> {"ESSENTIAL"}</option>
-            <option> {"PREMIUM"}</option>
-           
-          </select> */}
 
           <DurationSelection />
-          {/* <select
-            name="duration"
-            id="duration"
-            className="contactUsform w-full lg:w-[49%] lg:mr-1"
-            required
-          >
-            <option disabled selected value="">
-              {"duration*"}
-            </option>
-            <option>{"12 Month"}</option>
-            <option>{"24 month + 20% off"}</option>
-          </select> */}
 
           <input
             type="number"
@@ -105,17 +82,6 @@ export default async function choosePlan() {
           />
 
           <ExtraSelection />
-
-          {/* <select id="extras" name="extras" className="contactUsform w-full">
-            <option disabled selected value="">
-              {"Extras"}
-            </option>
-            <option>{"none"}</option>
-            <option>{"Youtube channel (600krmonth)"}</option>
-            <option>
-              {"Commentators (350kr/month)+ Youtube channel (600krmonth)"}
-            </option>
-          </select> */}
 
           <textarea
             id="additionalInformation"
@@ -131,7 +97,7 @@ export default async function choosePlan() {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 }
