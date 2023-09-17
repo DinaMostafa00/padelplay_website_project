@@ -1,4 +1,4 @@
-import choosePlanForm from "@/components/choosePlanForm";
+import ChoosePlanForm from "@/components/choosePlanForm";
 import DurationSelection from "@/components/durationSelection";
 import ExtraSelection from "@/components/extraSelection";
 import PriceSelection from "@/components/priceSelection";

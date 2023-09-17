@@ -1,12 +1,20 @@
 "use client";
 import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 
 export default function ExtraSelection() {
   const searchParams = useSearchParams();
   const selectedExtra = searchParams.get("selectedExtra");
+  // const [extras, setExtras] = useState("");
 
   return (
-    <select id="extras" name="extras" className="contactUsform w-full">
+    <select
+      // value={extras}
+      // onChange={(e) => setExtras(e.target.value)}
+      id="extras"
+      name="extras"
+      className="contactUsform w-full"
+    >
       <option disabled selected value="">
         {"Extras"}
       </option>
