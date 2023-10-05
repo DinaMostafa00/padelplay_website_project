@@ -1,31 +1,22 @@
 "use client";
-import React, { FormEvent, useState } from "react";
-import { useSearchParams } from "next/navigation";
+
+import { FormEvent, useState } from "react";
 import Link from "next/link";
 
-export default function choosePlanForm() {
-  const searchParams = useSearchParams();
-  const selectedPlan = searchParams.get("selectedPlan");
-  const selectedDuration = searchParams.get("selectedDuration");
-  const selectedExtra = searchParams.get("selectedExtra");
-
+export default function InviteArena() {
   const [isSubmitted, setSubmitted] = useState(false);
   const [arenaName, setArenaName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
   const [address, setAddress] = useState("");
-  const [quantity, setQuantity] = useState("");
   const [additionalInformation, setAdditionalInformation] = useState("");
-  const [plan, setPlan] = useState(selectedPlan || "");
-  const [duration, setDuration] = useState(selectedDuration || "");
-  const [extras, setExtras] = useState(selectedExtra || "");
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/choosePlan", {
+      const res = await fetch("/api/inviteArenaApi", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -36,11 +27,7 @@ export default function choosePlanForm() {
           email,
           country,
           address,
-          quantity,
           additionalInformation,
-          plan,
-          duration,
-          extras,
         }),
       });
 
@@ -51,7 +38,6 @@ export default function choosePlanForm() {
       console.error("Err", err);
     }
   };
-
   return isSubmitted ? (
     <div className="flex flex-col  items-center m-12  ">
       <h3 className="text-center text-2xl font-bold  mb-2">
@@ -68,7 +54,7 @@ export default function choosePlanForm() {
       </Link>
     </div>
   ) : (
-    <div>
+    <div className="pb-20">
       <form onSubmit={onSubmit} method="POST" className="max-w-lg mx-auto">
         <input
           value={arenaName}
@@ -98,10 +84,10 @@ export default function choosePlanForm() {
           type="email"
           id="email"
           name="email"
-          placeholder="E-mail*"
+          placeholder="E-mail"
           className="contactUsform w-full "
-          required
         />
+
         <input
           value={country}
           onChange={(e) => setCountry(e.target.value)}
@@ -124,72 +110,6 @@ export default function choosePlanForm() {
           required
         />
 
-        {/* <PriceSelection /> */}
-        <select
-          value={plan}
-          onChange={(e) => setPlan(e.target.value)}
-          name="plan"
-          id="plan"
-          className="contactUsform w-full "
-          required
-        >
-          <option disabled selected value="">
-            {"Plan*"}
-          </option>
-          <option value="BASIC">{"BASIC"}</option>
-          <option value="ESSENTIAL">{"ESSENTIAL"}</option>
-          <option value="PREMIUM">{"PREMIUM"}</option>
-        </select>
-
-        {/* <DurationSelection /> */}
-        <select
-          value={duration}
-          onChange={(e) => setDuration(e.target.value)}
-          name="duration"
-          id="duration"
-          className="contactUsform w-full lg:w-[49%] lg:mr-1"
-          required
-        >
-          <option disabled selected value="">
-            {"duration*"}
-          </option>
-          <option value="12 Month">{"12 Month"}</option>
-          <option value="24 month + 20% off">{"24 month + 20% off"}</option>
-        </select>
-
-        <input
-          value={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
-          type="number"
-          id="quantity"
-          name="quantity"
-          placeholder="quantity*"
-          className="contactUsform  w-full lg:w-[49%] lg:mr-1"
-          min="1"
-          max="10"
-          required
-        />
-
-        {/* <ExtraSelection /> */}
-        <select
-          value={extras}
-          onChange={(e) => setExtras(e.target.value)}
-          id="extras"
-          name="extras"
-          className="contactUsform w-full"
-        >
-          <option disabled selected value="">
-            {"Extras"}
-          </option>
-          <option value="none">{"none"}</option>
-          <option value="Youtube channel (600krmonth)">
-            {"Youtube channel (600kr/month)"}
-          </option>
-          <option value="Commentators (350kr/month)+ Youtube channel (600kr/month)">
-            {"Commentators (350kr/month) + Youtube channel (600kr/month)"}
-          </option>
-        </select>
-
         <textarea
           value={additionalInformation}
           onChange={(e) => setAdditionalInformation(e.target.value)}
@@ -197,7 +117,7 @@ export default function choosePlanForm() {
           name="additionalInformation"
           placeholder="Additional Information"
           className="  contactUsform w-full"
-          // rows="3"
+          rows={3}
         ></textarea>
 
         <div className="flex justify-end">

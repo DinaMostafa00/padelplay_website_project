@@ -21,20 +21,16 @@ export async function POST(req: Request, res: Response) {
     email,
     country,
     address,
-    quantity,
     additionalInformation,
-    plan,
-    duration,
-    extras,
   } = body;
 
   const messageData = {
-    from: "Purchase Request PLAYVIO!! <contact@mail.plaivio.se>",
+    from: "Arena Invitation - PLAYVIO!! <contact@mail.plaivio.se>",
     to: "playvioforms@gmail.com, dinayoussry96@gmail.com",
-    subject: "Purchase Request!!",
+    subject: "Arena Invitation - PLAYVIO",
     text: `Hello!!,
 
-    You have a new form entry from: Name: ${arenaName} ${phoneNumber} , E-mail: ${email}, Country${country}, address${address} , plan${plan}, quantity${quantity}, duration${duration}, extras${extras}  .
+    You have a new form entry from: Name: ${arenaName} ${phoneNumber} , E-mail: ${email}, Country${country}, address${address}.
 
     additionalInformation${additionalInformation}.
     `,
