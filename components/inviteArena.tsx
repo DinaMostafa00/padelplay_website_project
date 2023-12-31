@@ -11,9 +11,9 @@ export default function InviteArena() {
   const [country, setCountry] = useState("");
   const [address, setAddress] = useState("");
   const [additionalInformation, setAdditionalInformation] = useState("");
-  const [errors, setErrors] = useState<FormErrors>({});
+  const [errors, setErrors] = useState<FormErrorsArena>({});
 
-  interface FormErrors {
+  interface FormErrorsArena {
     arenaName?: string;
     phoneNumber?: string;
     email?: string;
@@ -23,7 +23,7 @@ export default function InviteArena() {
   }
 
   const validate = () => {
-    let tempErrors: FormErrors = {};
+    let tempErrors: FormErrorsArena = {};
     if (!arenaName) tempErrors.arenaName = "Arena Name is required";
     if (!phoneNumber) tempErrors.phoneNumber = "Phone Number is required";
     if (!email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i))
@@ -61,6 +61,8 @@ export default function InviteArena() {
       } catch (err: any) {
         console.error("Err", err);
       }
+    } else {
+      setErrors(validationErrors);
     }
   };
 
