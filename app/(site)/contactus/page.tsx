@@ -1,4 +1,4 @@
-import ContactForm from "@/components/contactform";
+import ContactForm from "@/components/old_contactform";
 import { getContacUstPage } from "@/sanity/sanity-utils";
 import React from "react";
 
@@ -41,55 +41,6 @@ export default async function productPage() {
             </div>
 
             <ContactForm />
-
-            {/* <div className="">
-              <form
-                action="https://formsubmit.co/el/zudobo"
-                method="POST"
-                className="max-w-lg mx-auto"
-              >
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="First Name"
-                  className="contactUsform w-full lg:w-[49%] lg:mr-1"
-                  required
-                />
-
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  placeholder="Last Name"
-                  className="contactUsform  w-full lg:w-[49%] lg:mr-1"
-                  required
-                />
-
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="E-mail"
-                  className="contactUsform w-full "
-                  required
-                />
-
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Message"
-                  className="  contactUsform w-full h-32"
-                  required
-                ></textarea>
-
-                <div className="flex justify-end">
-                  <button type="submit" className="yellowButton">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div> */}
           </div>
         </div>
       ))}
