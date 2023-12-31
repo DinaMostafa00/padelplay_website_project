@@ -91,7 +91,6 @@ export default function InviteArena() {
             name="arenaName"
             placeholder="Arena Name*"
             className="contactUsform w-full lg:w-[49%] lg:mr-1"
-            required
           />
           {errors.arenaName && (
             <p className="text-red-500">{errors.arenaName}</p>
@@ -105,7 +104,6 @@ export default function InviteArena() {
             name="phoneNumber"
             placeholder="Phone Number*"
             className="contactUsform  w-full lg:w-[49%] lg:mr-1"
-            required
           />
           {errors.phoneNumber && (
             <p className="text-red-500">{errors.phoneNumber}</p>
@@ -134,7 +132,6 @@ export default function InviteArena() {
             name="country"
             placeholder="country*"
             className="contactUsform w-full "
-            required
           />
           {errors.country && <p className="text-red-500">{errors.country}</p>}
         </div>
@@ -148,7 +145,6 @@ export default function InviteArena() {
             name="address"
             placeholder="Address*"
             className="contactUsform w-full "
-            required
           />
           {errors.address && <p className="text-red-500">{errors.address}</p>}
         </div>
