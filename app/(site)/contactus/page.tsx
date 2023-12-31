@@ -1,4 +1,4 @@
-import ContactForm from "@/components/old_contactform";
+import ContactForm from "@/components/contactform";
 import { getContacUstPage } from "@/sanity/sanity-utils";
 import React from "react";
 

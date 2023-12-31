@@ -89,12 +89,11 @@ export default function ContactForm() {
             name="firstName"
             placeholder="First Name"
             className="contactUsform w-full lg:w-[49%] lg:mr-1"
-            required
           />
-          {errors.firstName && <p>{errors.firstName}</p>}
-        </div>
+          {errors.firstName && (
+            <p className="text-red-500">{errors.firstName}</p>
+          )}
 
-        <div>
           <input
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
@@ -103,9 +102,8 @@ export default function ContactForm() {
             name="lastName"
             placeholder="Last Name"
             className="contactUsform  w-full lg:w-[49%] lg:mr-1"
-            required
           />
-          {errors.lastName && <p>{errors.lastName}</p>}
+          {errors.lastName && <p className="text-red-500">{errors.lastName}</p>}
         </div>
 
         <div>
@@ -117,10 +115,9 @@ export default function ContactForm() {
             name="email"
             placeholder="E-mail"
             className="contactUsform w-full "
-            required
           />
 
-          {errors.email && <p>{errors.email}</p>}
+          {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
 
         <div>
@@ -131,9 +128,8 @@ export default function ContactForm() {
             name="message"
             placeholder="Message"
             className="  contactUsform w-full h-32"
-            required
           ></textarea>
-          {errors.message && <p>{errors.message}</p>}
+          {errors.message && <p className="text-red-500">{errors.message}</p>}
         </div>
 
         <div className="flex justify-end">
