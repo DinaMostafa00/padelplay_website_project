@@ -2,6 +2,8 @@ import { getProductPage } from "@/sanity/sanity-utils";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ProductGrid from "@/components/productGrid";
+import ProductImage from "@/components/productImage";
 
 export default async function productPage() {
   const product = await getProductPage();
@@ -9,60 +11,33 @@ export default async function productPage() {
   return (
     <div>
       {product.map((product) => (
+        // Product Heading
         <div key={product._id} className="defaultSpacing ">
           <h1 className="font-bold text-3xl flex justify-center pt-7">
             {product.headerInfo}
           </h1>
 
+          {/* Product Video */}
           <video controls autoPlay loop muted className=" px-2 md:px-20 my-5">
             <source src={product.videoUrl} type="video/mp4" />
           </video>
 
+          {/* Product Text1 */}
           <p className=" p-2 md:p-20 ">{product.text1}</p>
 
-          <div className="borderBox flex justify-center ">
-            <div className="grid grid-cols-1   md:grid-cols-2 gap-5 md:gap-20 lg:pt-5">
-              <div className="h-64">
-                {product.image1 && (
-                  <Image
-                    src={product.image1}
-                    alt={product.name}
-                    width={650}
-                    height={300}
-                    className="object-cover"
-                  />
-                )}
-              </div>
+          {/* Product Grid */}
+          <ProductGrid product={product} />
 
-              <div className="">
-                {product.image2 && (
-                  <Image
-                    src={product.image2}
-                    alt={product.name}
-                    width={650}
-                    height={300}
-                    className="object-cover"
-                  />
-                )}
-              </div>
-            </div>
-          </div>
+          {/* Product Text2 */}
           <p className="p-2 md:p-20  ">{product.text2}</p>
 
-          <div className="flex justify-center borderBox">
-            {product.image3 && (
-              <Image
-                src={product.image3}
-                alt={product.name}
-                width={650}
-                height={300}
-                className="object-cover"
-              />
-            )}
-          </div>
+          {/* Product Images */}
+          <ProductImage product={product} />
 
+          {/* Product Text3 */}
           <p className="px-2 md:px-20 ">{product.text3}</p>
 
+          {/* Buttons */}
           <div className="grid grid-cols-1   md:grid-cols-2  gap-5 md:gap-20 lg:py-5 my-10">
             <div className="transparentButton">
               <Link href="/priceing">

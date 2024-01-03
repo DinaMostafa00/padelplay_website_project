@@ -101,7 +101,7 @@ export default function choosePlanForm() {
       </Link>
     </div>
   ) : (
-    <div>
+    <div className="mb-16">
       <form onSubmit={onSubmit} method="POST" className="max-w-lg mx-auto">
         <div>
           <input
@@ -206,9 +206,7 @@ export default function choosePlanForm() {
             <option value="24 month + 20% off">{"24 month + 20% off"}</option>
           </select>
           {errors.duration && <p className="text-red-500">{errors.duration}</p>}
-        </div>
 
-        <div>
           <input
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}

@@ -31,20 +31,19 @@ export default async function blogPage({ params }: Props) {
         </p>
       </div>
 
-      <div className="flex-col items-center px-3 lg:px-48">
+      <div className="flex-col items-center px-3 lg:px-48 ">
         <PortableText value={blog.content} />
       </div>
-      {/* <p className="font-thin text-gray-600 italic pl-3  lg:pl-64  ">
-        {blog.createdAt}
-      </p> */}
 
-      <p className="font-thin text-gray-600 italic pl-3 lg:pl-64">
-        {new Date(blog.createdAt).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "numeric",
-          day: "numeric",
-        })}
-      </p>
+      {/* <p className="font-thin text-gray-600 italic pl-3 lg:pl-64">
+        {blog.createdAt
+          ? blog.createdAt.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "numeric",
+              day: "numeric",
+            })
+          : "Date is invalid"}
+      </p> */}
 
       <p className="font-bold pt-9"> {"CONNECT ON SOCIAL MEDIA"}</p>
       <div className=" md:flex md:justify-between">

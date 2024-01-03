@@ -13,6 +13,7 @@ export default async function productPage() {
             {"CONTACT US"}
           </h1>
 
+          {/* Contact info section */}
           <div className="lg:grid grid-cols-[400px_minmax(80px,_2fr)] gap-4 pb-28 ">
             <div>
               <div className="contactUsDivs">
