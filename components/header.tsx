@@ -22,10 +22,10 @@ export const Header = () => {
 
   return (
     <Popover>
-      <header className="relative top-0 z-30 flex w-full items-center justify-between bg-transparent py-10 ">
+      <header className="relative top-0 z-30 flex w-full items-center justify-around  bg-transparent py-10 ">
         <div className="flex items-center justify-center md:w-1/5">
           <Link href="/">
-            <div className="relative cursor-pointer opacity-90 transtion hover:opacity-100 ">
+            <div className="relative cursor-pointer opacity-90 transtion hover:opacity-100 xs:pl-4">
               <Image
                 src="/PLAYVIOLOGO2.webp"
                 alt="Company Logo"
@@ -63,7 +63,7 @@ export const Header = () => {
           </Link>
         </div>
 
-        <div className="flex grow items-center justify-end px-10  lg:hidden">
+        <div className="flex  items-center justify-end px-10  lg:hidden">
           <Popover.Button className="Inline-flex Items-center justify-center border border-yellow-500 bg-transparent p-2 text-gray-400 [hover:bg-gray-100 hover: text-gray-500)focus: outLine-none focus: ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
             <Bars3Icon
