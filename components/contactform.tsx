@@ -2,7 +2,6 @@
 import Link from "next/dist/client/link";
 import { useState } from "react";
 import { FormEvent } from "react-is/node_modules/@types/react";
-import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
   const [isSubmitted, setSubmitted] = useState(false);
@@ -135,7 +134,7 @@ export default function ContactForm() {
 
         <div className="flex justify-end">
           {/* <ReCAPTCHA sitekey={process.env.RECAPTCHA_SITE_KEY!} /> */}
-          <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} />
+
           <button type="submit" className="yellowButton">
             Submit
           </button>
