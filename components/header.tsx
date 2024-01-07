@@ -22,15 +22,16 @@ export const Header = () => {
 
   return (
     <Popover>
-      <header className="relative top-0 z-30 flex w-full items-center justify-around  bg-transparent py-10 ">
+      <header className="relative top-0 z-30 flex w-full items-center justify-between  bg-transparent py-10 ">
         <div className="flex items-center justify-center md:w-1/5">
           <Link href="/">
-            <div className="relative cursor-pointer opacity-90 transtion hover:opacity-100 xs:pl-4">
+            <div className="relative cursor-pointer opacity-90 transtion hover:opacity-100 ">
               <Image
                 src="/PLAYVIOLOGO2.webp"
                 alt="Company Logo"
                 width={150}
                 height={150}
+                className="ml-4"
               />
             </div>
           </Link>
