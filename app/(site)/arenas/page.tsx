@@ -13,20 +13,22 @@ export default async function arenas() {
       <div className="borderBox flex justify-center ">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-20 lg:py-5">
           {arenas.map((arenas) => (
-            <Link href={arenas.url} className="hover:scale-105">
-              <div className="h-54">
-                {arenas.image && (
-                  <Image
-                    src={arenas.image}
-                    alt={arenas.name}
-                    width={200}
-                    height={100}
-                    className="object-cover"
-                  />
-                )}
-              </div>
-              <div className="mt-2 font-extrabold">{arenas.name}</div>
-            </Link>
+            <div key={arenas._id}>
+              <Link href={arenas.url} className="hover:scale-105">
+                <div className="h-54">
+                  {arenas.image && (
+                    <Image
+                      src={arenas.image}
+                      alt={arenas.name}
+                      width={200}
+                      height={100}
+                      className="object-cover"
+                    />
+                  )}
+                </div>
+                <div className="mt-2 font-extrabold">{arenas.name}</div>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

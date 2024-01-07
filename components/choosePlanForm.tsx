@@ -3,7 +3,7 @@ import React, { FormEvent, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export default function choosePlanForm() {
+export default function ChoosePlanForm() {
   const searchParams = useSearchParams();
   const selectedPlan = searchParams.get("selectedPlan");
   const selectedDuration = searchParams.get("selectedDuration");
