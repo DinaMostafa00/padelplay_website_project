@@ -1,6 +1,7 @@
 import { getContacUstPage } from "@/sanity/sanity-utils";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const middleFooterLinks = [
   { href: "/product", label: "PRODUCT" },
@@ -26,10 +27,17 @@ export const Footer = () => {
       {/*  contactUs data Rendered here */}
 
       <div>
-        <div className="grid grid-cols-2 gap-4 justify-between">
-          <div className="cursor-pointer opacity-75 transtion hover:opacity-100 font-bold px-2 pt-2 lg:px-10 text-2xl">
-            <Link href="/"> {"PadelPlay"}</Link>
-          </div>
+        <div className="grid grid-cols-2 gap-4 justify-between ">
+          <Link href="/">
+            <div className="relative cursor-pointer opacity-90 transtion hover:opacity-100 ">
+              <Image
+                src="/PLAYVIOLOGO.webp"
+                alt="Company Logo"
+                width={200}
+                height={200}
+              />
+            </div>
+          </Link>
 
           <div className="contactUsDivs flex justify-end ">
             <Link href="/contactus">
@@ -37,24 +45,25 @@ export const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className=" flex justify-end pb-4">
-          {"Follow Us:"}
+        <div className=" flex justify-end pb-4 ">
+          <p className="font-bold">{"Follow us:"}</p>
+
           <a
             href="https://www.instagram.com/padelplay.nu/?hl=en"
             className="px-2 hover:text-yellow-500"
           >
-            {"Instagram"}
+            <p className="font-thin "> {"Instagram"}</p>
           </a>
           <span className="text-gray-400 pr-2">{"|"}</span>
           <a
             href="https://www.linkedin.com/company/padelplay/?originalSubdomain=se"
             className="pr-2 hover:text-yellow-500"
           >
-            {"LinkedIn"}
+            <p className="font-thin "> {"LinkedIn"}</p>
           </a>
         </div>
         <div className="text-center font-thin text-gray-400 pb-4">
-          <p>{"Copyright PadelPlay 2023"}</p>
+          <p>{"Copyright Playvio 2024"}</p>
         </div>
       </div>
     </footer>

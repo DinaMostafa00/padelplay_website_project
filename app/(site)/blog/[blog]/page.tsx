@@ -49,16 +49,20 @@ export default async function blogPage({ params }: Props) {
       <div className=" md:flex md:justify-between">
         <div className="flex items-center mb-4">
           <Link href={"https://www.instagram.com/padelplay.nu/"}>
-            <img
+            <Image
               src="/instagram.svg"
-              alt="HEJ"
+              alt="Instagram Logo"
+              width={50}
+              height={50}
               className="ml-2  hover:scale-105"
             />
           </Link>
           <Link href={"https://www.linkedin.com/company/padelplay/"}>
-            <img
+            <Image
               src="/linkedin.svg"
-              alt="HEJ"
+              alt="linkedin Logo"
+              width={50}
+              height={50}
               className="ml-2  hover:scale-105"
             />
           </Link>

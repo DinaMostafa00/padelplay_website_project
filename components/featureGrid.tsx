@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface HomePageProps {
   homePage: {
@@ -28,7 +29,13 @@ const FeatureGrid: React.FC<HomePageProps> = ({ homePage }) => {
 
       <div className="grid grid-cols-[50px_minmax(200px,_1fr)]  gap-4  xl:grid-cols-[100px_minmax(80px,_1fr)100px_minmax(80px,_1fr)] lg:gap-8  ">
         <div className="imgGridDivStyling">
-          <img src="/44.png" alt="HEJ" className="imgInGridHomePage " />
+          <Image
+            src="/44.png"
+            alt="Circle icon"
+            width={50}
+            height={50}
+            className="imgInGridHomePage "
+          />
         </div>
 
         <div>
@@ -36,35 +43,65 @@ const FeatureGrid: React.FC<HomePageProps> = ({ homePage }) => {
           <p className="gridTextHomePage ">{homePage.featuresText1}</p>
         </div>
         <div className="imgGridDivStyling">
-          <img src="/55.png" alt="HEJ" className="imgInGridHomePage " />
+          <Image
+            src="/55.png"
+            alt="Circle icon"
+            width={50}
+            height={50}
+            className="imgInGridHomePage "
+          />
         </div>
         <div>
           <h3 className="gridTitleHomePage">{homePage.featuresHeader2}</h3>
           <p className="gridTextHomePage ">{homePage.featuresText2}</p>
         </div>
         <div>
-          <img src="/66.png" alt="HEJ" className="imgInGridHomePage " />
+          <Image
+            src="/66.png"
+            alt="Circle icon"
+            width={50}
+            height={50}
+            className="imgInGridHomePage "
+          />
         </div>
         <div>
           <h3 className="gridTitleHomePage">{homePage.featuresHeader3}</h3>
           <p className="gridTextHomePage ">{homePage.featuresText3}</p>
         </div>
         <div className="imgGridDivStyling">
-          <img src="/77.png" alt="HEJ" className="imgInGridHomePage " />
+          <Image
+            src="/77.png"
+            alt="Circle icon"
+            width={50}
+            height={50}
+            className="imgInGridHomePage "
+          />
         </div>
         <div>
           <h3 className="gridTitleHomePage">{homePage.featuresHeader4}</h3>
           <p className="gridTextHomePage ">{homePage.featuresText4}</p>
         </div>
         <div className="imgGridDivStyling">
-          <img src="/88.png" alt="HEJ" className="imgInGridHomePage " />
+          <Image
+            src="/88.png"
+            alt="Circle icon"
+            width={50}
+            height={50}
+            className="imgInGridHomePage "
+          />
         </div>
         <div>
           <h3 className="gridTitleHomePage">{homePage.featuresHeader5}</h3>
           <p className="gridTextHomePage ">{homePage.featuresText5}</p>
         </div>
         <div className="imgGridDivStyling">
-          <img src="/99.png" alt="HEJ" className="imgInGridHomePage " />
+          <Image
+            src="/99.png"
+            alt="Circle icon"
+            width={50}
+            height={50}
+            className="imgInGridHomePage "
+          />
         </div>
         <div>
           <h3 className="gridTitleHomePage">{homePage.featuresHeader6}</h3>

@@ -1,6 +1,7 @@
 import ContactForm from "@/components/contactform";
 import { getContacUstPage } from "@/sanity/sanity-utils";
 import React from "react";
+import Image from "next/image";
 
 export default async function productPage() {
   const contactUs = await getContacUstPage();
@@ -17,14 +18,26 @@ export default async function productPage() {
           <div className="lg:grid grid-cols-[400px_minmax(80px,_2fr)] gap-4 pb-28 ">
             <div>
               <div className="contactUsDivs">
-                <img src="/icon1.svg" alt="HEJ" className="contactUsIcons" />
+                <Image
+                  src="/icon1.svg"
+                  alt="contact icon"
+                  width={50}
+                  height={50}
+                  className="contactUsIcons"
+                />
                 <p className="flex items-center hover:text-yellow-500 md:pr-20">
                   {contactUs.address}
                 </p>
               </div>
 
               <div className="contactUsDivs  ">
-                <img src="/icon2.svg" alt="HEJ" className="contactUsIcons" />
+                <Image
+                  src="/icon2.svg"
+                  alt="contact icon"
+                  width={50}
+                  height={50}
+                  className="contactUsIcons"
+                />
                 <div className="flex-col items-center">
                   <h3 className="font-bold">General Inquiries</h3>
                   <p className="contactUsText mb-2 ">{contactUs.email1}</p>
@@ -34,7 +47,13 @@ export default async function productPage() {
               </div>
 
               <div className="contactUsDivs">
-                <img src="/icon3.svg" alt="HEJ" className="contactUsIcons" />
+                <Image
+                  src="/icon3.svg"
+                  alt="contact icon"
+                  width={50}
+                  height={50}
+                  className="contactUsIcons"
+                />
                 <p className="flex items-center hover:text-yellow-500">
                   {contactUs.phoneNumber}
                 </p>

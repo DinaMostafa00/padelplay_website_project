@@ -8,6 +8,7 @@ import { XMarkIcon } from "@heroicons/react/24/solid";
 import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const middleHeaderLinks = [
   { href: "/product", label: "PRODUCT" },
@@ -24,8 +25,13 @@ export const Header = () => {
       <header className="relative top-0 z-30 flex w-full items-center justify-between bg-transparent py-10 ">
         <div className="flex items-center justify-center md:w-1/5">
           <Link href="/">
-            <div className="relative cursor-pointer opacity-75 transtion hover:opacity-100 font-bold px-10 text-2xl">
-              {"PadelPlay"}
+            <div className="relative cursor-pointer opacity-90 transtion hover:opacity-100 ">
+              <Image
+                src="/PLAYVIOLOGO2.webp"
+                alt="Company Logo"
+                width={150}
+                height={150}
+              />
             </div>
           </Link>
         </div>
