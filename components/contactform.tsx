@@ -133,8 +133,6 @@ export default function ContactForm() {
         </div>
 
         <div className="flex justify-end">
-          {/* <ReCAPTCHA sitekey={process.env.RECAPTCHA_SITE_KEY!} /> */}
-
           <button type="submit" className="yellowButton">
             Submit
           </button>
