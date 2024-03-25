@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Overview
+The Padelplay website project is designed to offer an intuitive and visually appealing online presence for Padelplay, a company specializing in promoting and facilitating padel sports. This project encompasses a comprehensive solution that includes user research, prototype development, and front-end implementation using modern web technologies.
+
+## Technologies Used
+- Next.js for server-side rendering and static site generation.
+- Sanity.io as a backend for content management, providing a flexible and powerful solution for managing website content.
+- TypeScript for adding type safety to the development process, enhancing code quality and maintainability.
+- Tailwind CSS for utility-first CSS, facilitating rapid UI development with responsiveness in mind.
+- Additional tools and libraries include HTML, CSS, JavaScript, React.js, and various Adobe Creative Suite applications for design purposes.
 
 ## Getting Started
 
